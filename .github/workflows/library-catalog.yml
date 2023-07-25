@@ -1,4 +1,4 @@
-name: Library App CI/CD
+name: Library Catalog App CI/CD
 
 on:
   push:

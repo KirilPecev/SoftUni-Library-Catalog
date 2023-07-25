@@ -25,7 +25,9 @@ jobs:
         cache: 'npm'
     - name: Install dependencies    
       run: npm install
-    - name: Start app
+    - name: Start server
+      run: node server/server.js & npx wait-on http://localhost:3030
+    - name: Start UI app
       run: npm start & npx wait-on http://localhost:3000
     - name: Run tests
       run: npm test

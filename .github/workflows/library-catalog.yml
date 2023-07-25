@@ -25,6 +25,8 @@ jobs:
         cache: 'npm'
     - name: Install dependencies    
       run: npm install
+    - name: Install playwright
+      run: npx playwright install
     - name: Start server
       run: node server/server.js & npx wait-on http://localhost:3030/admin
     - name: Start UI app
